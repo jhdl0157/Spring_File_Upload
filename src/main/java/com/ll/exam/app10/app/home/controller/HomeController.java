@@ -15,9 +15,6 @@ import java.io.IOException;
 @Controller
 @RequiredArgsConstructor
 public class HomeController {
-
-    @Value("${custom.genFileDirPath}")
-    private String DIR_URL;
     @RequestMapping("/")
     public String main() {
         return "home/main";
@@ -26,12 +23,5 @@ public class HomeController {
     @RequestMapping("/test/upload")
     public String getupload() {
         return "home/test/upload";
-    }
-    @PostMapping("/upload")
-    public String upload(@RequestParam("img1") MultipartFile multipartFile) throws IOException {
-        System.out.println("진입 성공");
-        System.out.println(multipartFile.getOriginalFilename());
-        multipartFile.transferTo(new File(DIR_URL+"/1.png"));
-        return "home/main";
     }
 }
