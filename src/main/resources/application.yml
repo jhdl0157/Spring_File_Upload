@@ -18,5 +18,5 @@ spring:
     hibernate:
       ddl-auto: create
 custom:
-  genFileDirPath: D:\file
-#    /Users/jaeho/Desktop/work/file
+  genWinFileDirPath: D:\file
+  genMacFileDirPath: /Users/jaeho/Desktop/work/file
