@@ -14,11 +14,17 @@ import java.io.IOException;
 @Controller
 @RequestMapping("/upload")
 public class FileUploadController {
-    @Value("${custom.genFileDirPath}")
-    private  String DIR_URL;
+    private static   String DIR_URL;
+    private static String MAC_DIR_URL;
 
+    @Value("${custom.genFileDirPath}")
+    public void setDIR_URL(String value) {
+        DIR_URL = value;
+    }
     @Value("${custom.genMac}")
-    private  String MAC_DIR_URL;
+    public void setMAC_DIR_URL(String value) {
+        MAC_DIR_URL = value;
+    }
 
 
     @RequestMapping("")
@@ -34,7 +40,7 @@ public class FileUploadController {
         return "업로드 완료!";
     }
 
-    public  String getOsDir(){
+    public static String getOsDir(){
         String osName = System.getProperty("os.name").toLowerCase();
         if (osName.contains("win")) {
             System.out.println("This is Windows");
