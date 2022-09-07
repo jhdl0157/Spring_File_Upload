@@ -1,6 +1,6 @@
-package com.ll.exam.app10.member.repository;
+package com.ll.exam.app10.app.member.repository;
 
-import com.ll.exam.app10.member.entity.Member;
+import com.ll.exam.app10.app.member.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

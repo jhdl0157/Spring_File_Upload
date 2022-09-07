@@ -1,10 +1,11 @@
-package com.ll.exam.app10.member.entity;
+package com.ll.exam.app10.app.member.entity;
 
-import com.ll.exam.app10.base.entity.BaseEntity;
+import com.ll.exam.app10.app.base.entity.BaseEntity;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 
 @Entity
 @Setter

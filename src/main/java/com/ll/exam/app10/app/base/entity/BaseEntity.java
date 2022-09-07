@@ -1,4 +1,4 @@
-package com.ll.exam.app10.base.entity;
+package com.ll.exam.app10.app.base.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,7 @@
-package com.ll.exam.app10.member.service;
+package com.ll.exam.app10.app.member.service;
 
-import com.ll.exam.app10.member.entity.Member;
-import com.ll.exam.app10.member.repository.MemberRepository;
+import com.ll.exam.app10.app.member.entity.Member;
+import com.ll.exam.app10.app.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-
 @Service
 @RequiredArgsConstructor
 public class MemberService implements UserDetailsService {
@@ -33,7 +32,7 @@ public class MemberService implements UserDetailsService {
     }
 
     public Member join(String username, String password, String email, MultipartFile profileImg) {
-        String profileImgRelPath = "templates/member/" + UUID.randomUUID().toString() + ".png";
+        String profileImgRelPath = "member/" + UUID.randomUUID().toString() + ".png";
         File profileImgFile = new File(genFileDirPath + "/" + profileImgRelPath);
 
         profileImgFile.mkdirs(); // 관련된 폴더가 혹시나 없다면 만들어준다.

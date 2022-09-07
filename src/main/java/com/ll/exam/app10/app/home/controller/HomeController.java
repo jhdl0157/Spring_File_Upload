@@ -13,7 +13,7 @@ public class HomeController {
     }
 
     @RequestMapping("/test/upload")
-    public String getupload() {
+    public String upload() {
         return "home/test/upload";
     }
 }

@@ -1,14 +1,15 @@
-package com.ll.exam.app10.member.controller;
+package com.ll.exam.app10.app.member.controller;
 
-
-import com.ll.exam.app10.member.entity.Member;
-import com.ll.exam.app10.member.service.MemberService;
+import com.ll.exam.app10.app.member.entity.Member;
+import com.ll.exam.app10.app.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletException;
