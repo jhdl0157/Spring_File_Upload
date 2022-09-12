@@ -89,6 +89,22 @@ class AppTests {
     @Rollback(false)
     void t4() throws Exception {
         // mockMvc로 로그인 처리
+        // WHEN
+        // GET /
+        ResultActions resultActions = mvc
+                .perform(
+                        get("/member/profile")
+                                .with(user("user4").password("1234").roles("user"))
+                )
+                .andDo(print());
+
+        // THEN
+        // 안녕
+        resultActions
+                .andExpect(status().is2xxSuccessful())
+                .andExpect(handler().handlerType(MemberController.class))
+                .andExpect(handler().methodName("showProfile"))
+                .andExpect(content().string(containsString("user4@test.com")));
     }
 
     @Test
