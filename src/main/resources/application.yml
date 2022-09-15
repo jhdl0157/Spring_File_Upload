@@ -18,4 +18,4 @@ spring:
     hibernate:
       ddl-auto: create
 custom:
-  genFileDirPath: d:/file
+  genFileDirPath: c:/temp/app10

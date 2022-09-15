@@ -1,4 +1,4 @@
-package com.ll.exam.app10.app.home.controller.input;
+package com.ll.exam.app10.app.member.controller.input;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
